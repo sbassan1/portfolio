@@ -1,1 +1,79 @@
 @import "tailwindcss";
+
+:root {
+    --bg-color: #f9f9f7;
+    --text-color: #0f0f0f;
+    --highlight-color: #3b82f6;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: x-large;
+    padding: 20px 120px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: var(--bg-color);
+    transition: all 0.3s ease-in-out;
+}
+
+header.scrolled {
+    margin: 10px 120px;
+    padding: 10px 30px;
+    border-radius: 30px;
+    top: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+}
+
+.header-links ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    gap: 20px;
+}
+
+.header-links a {
+    text-decoration: none;
+    color: #333;
+}
+
+main {
+    width: 100%;
+    flex: 1;
+    padding: 20px 120px;
+    box-sizing: border-box;
+}
+
+footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: medium;
+    padding: 20px 120px;
+    box-sizing: border-box;
+}
+.footer-links ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    gap: 20px;
+}
+
+.footer-links a {
+    text-decoration: none;
+    color: #333;
+}
