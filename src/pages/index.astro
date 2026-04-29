@@ -2,8 +2,35 @@
 import BaseLayout from "../layouts/BaseLayout.astro"
 ---
 
-<BaseLayout>
-	<div style="height: 150vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; color: #666;">
-		<h2>TESTING</h2>
-	</div>
+<BaseLayout title="Santiago Bassani | Portfolio">
+
+	<section class="section-container hero-content">
+		<div class="hero-text">
+			<span class="hero-greeting">Hi there, I'm</span>
+			<h1 class="hero-title">Santiago Bassani.</h1>
+			<p class="hero-intro">
+				A Fullstack Software Developer based in Buenos Aires. I specialize in building 
+				elegant websites that are functional, beautiful, and user-centered.
+			</p>
+		</div>
+		
+		<div class="profile-frame">
+			<img src="/profile.jpg" alt="Santiago Bassani" />
+		</div>
+	</section>
+	
+	<!-- Information Section -->
+	<section class="section-container" style="animation-delay: 0.2s;">
+		<div class="info-grid">
+			<div class="info-card">
+				<h3>Background</h3>
+				<p>I am a fullstack software developer with experience in building web applications with the MERN stack, I've been working freelance for 2 years mainly on frontend and done Contracts with leaders of the industry such as Hogarth.</p>
+			</div>
+			<div class="info-card">
+				<h3>Location</h3>
+				<p>I'm currently living and working in Ciudad Autónoma de Buenos Aires, Argentina, I'm available to work both remotely and in person if needed.</p>
+			</div>
+		</div>
+	</section>
+	
 </BaseLayout>
