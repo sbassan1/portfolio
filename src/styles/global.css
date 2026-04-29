@@ -9,8 +9,18 @@
     --accent-hover: 250 70% 50%;
     --glass-bg: rgba(255, 255, 255, 0.7);
     --glass-border: rgba(255, 255, 255, 0.3);
-    
     --transition-base: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+[data-theme="dark"] {
+    --bg-primary: 245 40% 6%;
+    --bg-secondary: 245 35% 10%;
+    --text-main: 245 20% 95%;
+    --text-muted: 245 15% 70%;
+    --accent: 250 80% 65%;
+    --accent-hover: 250 90% 75%;
+    --glass-bg: rgba(10, 10, 25, 0.7);
+    --glass-border: rgba(255, 255, 255, 0.05);
 }
 
 body {
@@ -84,6 +94,40 @@ header h1 {
     width: 100%;
 }
 
+/* Theme Toggle */
+.theme-toggle {
+    background: none;
+    border: none;
+    padding: 0.5rem;
+    cursor: pointer;
+    color: hsl(var(--text-main));
+    transition: var(--transition-base);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    background-color: hsl(var(--bg-secondary));
+}
+
+.theme-toggle:hover {
+    color: hsl(var(--accent));
+    transform: scale(1.1);
+}
+
+.theme-toggle svg {
+    width: 20px;
+    height: 20px;
+}
+
+[data-theme="dark"] .sun-icon { display: block; }
+[data-theme="dark"] .moon-icon { display: none; }
+[data-theme="light"] .sun-icon { display: none; }
+[data-theme="light"] .moon-icon { display: block; }
+
+/* Default state if no data-theme (usually light) */
+:root:not([data-theme]) .sun-icon { display: none; }
+:root:not([data-theme]) .moon-icon { display: block; }
+
 main {
     flex: 1;
     width: 100%;
@@ -146,7 +190,7 @@ main {
     height: 300px;
     border-radius: 50%;
     overflow: hidden;
-    border: 8px solid white;
+    border: 8px solid hsl(var(--bg-secondary));
     box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.1);
     transition: var(--transition-base);
     flex-shrink: 0;
@@ -171,7 +215,7 @@ main {
 }
 
 .info-card {
-    background: white;
+    background: hsl(var(--bg-secondary) / 0.5);
     padding: 2.5rem;
     border-radius: 24px;
     border: 1px solid hsl(var(--bg-secondary));
