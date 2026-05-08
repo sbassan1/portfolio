@@ -1,4 +1,7 @@
 ---
+import '../styles/global.css';
+ 
+
 const technologies = [
 	{
 		name: "React",
@@ -54,7 +57,7 @@ const technologies = [
 ---
 
 <div class="tech-stack-container">
-	<h2 class="tech-stack-title">Tech Stack</h2>
+	<h2 class="tech-stack-title">My Tech Stack</h2>
 	<div class="tech-grid">
 		{technologies.map((tech) => (
 			<div class="tech-item" style={`--brand-color: ${tech.color}`}>
@@ -83,6 +86,10 @@ const technologies = [
 		flex-wrap: wrap;
 		justify-content: center;
 		gap: 1.5rem;
+		padding: 2.5rem;
+		border-radius: 24px;
+		border: 1px solid hsl(var(--accent) / 0.4);
+		box-shadow: 0 20px 40px -10px hsl(var(--accent) / 0.1);
 	}
 
 	.tech-item {
