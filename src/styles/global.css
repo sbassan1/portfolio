@@ -191,6 +191,30 @@ main {
     max-width: 540px;
 }
 
+.hero-actions {
+    margin-top: 2.5rem;
+}
+
+.btn-primary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: hsl(var(--accent));
+    color: hsl(var(--bg-primary));
+    padding: 0.875rem 2.5rem;
+    border-radius: 30px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: var(--transition-base);
+    box-shadow: 0 4px 14px -2px hsl(var(--accent) / 0.5);
+}
+
+.btn-primary:hover {
+    background-color: hsl(var(--accent-hover));
+    transform: translateY(-3px);
+    box-shadow: 0 8px 24px -4px hsl(var(--accent) / 0.6);
+}
+
 .profile-frame {
     width: 300px;
     height: 300px;
