@@ -1,9 +1,40 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro"
+import TechStack from "../components/TechStack.astro"
 ---
 
-<BaseLayout>
-	<div style="height: 150vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; color: #666;">
-		<h2>TESTING</h2>
-	</div>
+<BaseLayout title="Santiago Bassani | Portfolio">
+
+	<section class="section-container hero-content">
+		<div class="hero-text">
+			<span class="hero-greeting">Hi there, I'm</span>
+			<h1 class="hero-title">Santiago Bassani.</h1>
+			<h2 class="hero-intro">
+				Fullstack Software Developer
+			</h2>
+			<div class="hero-actions">
+				<a href="/CV.pdf" download class="btn-primary">Download CV</a>
+			</div>
+		</div>
+		
+		<div class="profile-frame">
+			<img src="/profile.jpg" alt="Santiago Bassani" />
+		</div>
+	</section>
+	
+	<section class="section-container" style="animation-delay: 0.2s;">
+		<div class="info-grid">
+			<div class="info-card">
+				<h3>Background</h3>
+				<p>I am a fullstack software developer with experience in building web applications with the MERN stack, I've been working freelance for 2 years mainly on frontend and worked on a variety of projects, from  commisions for small businesses to contracts with industry leaders such as Hogarth.</p>
+			</div>
+			<div class="info-card">
+				<h3>Location</h3>
+				<p>I'm currently living and working in Ciudad Autónoma de Buenos Aires, Argentina, I'm available to work both remotely and in person if needed. I'm fluent on Spanish and English and I'm willing to work remotely for clients all around the world, I'm also open to relocate for the right opportunity.</p>
+			</div>
+		</div>
+
+		<TechStack />
+	</section>
+	
 </BaseLayout>
