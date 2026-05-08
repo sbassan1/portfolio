@@ -79,10 +79,10 @@ const technologies = [
 	}
 
 	.tech-grid {
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
 		gap: 1.5rem;
-		justify-items: center;
 	}
 
 	.tech-item {
@@ -96,6 +96,7 @@ const technologies = [
 		border-radius: 20px;
 		width: 100%;
 		max-width: 140px;
+		flex: 1 1 120px;
 		transition: var(--transition-base);
 		cursor: default;
 	}
@@ -144,12 +145,12 @@ const technologies = [
 
 	@media (max-width: 640px) {
 		.tech-grid {
-			grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
 			gap: 1rem;
 		}
 		
 		.tech-item {
 			padding: 1rem;
+			flex-basis: 100px;
 		}
 	}
 </style>
